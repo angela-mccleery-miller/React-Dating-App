@@ -1,0 +1,71 @@
+import React, {Component} from 'react';
+import axios from 'axios';
+
+import UserProfile from "./user-profile"
+
+
+export default class UserContainer extends Component{   
+    constructor(){
+        super();
+        
+        this.state = {
+            pageTitle: "Welcome to The Hot App",
+            isLoading: false,
+            data: []              
+        };      
+
+        this.handleFilter = this.handleFilter.bind(this);          
+    }
+
+    handleFilter(filter){
+        this.setState({
+            data: this.state.data.filter(item => {
+                return item.gender === filter;
+            })
+        });
+    }
+
+    getUserProfiles(){
+        axios
+          .get('https://jel-flask-dating-app-api.herokuapp.com/profiles')
+          .then(response => {
+            console.log("response data", response);
+            this.setState({
+                data: response.data.profiles
+            })
+          })
+          .catch(error => {
+            console.log(error);
+          });  
+    }
+
+    userProfiles(){            
+        return this.state.data.map(item => {
+            return (
+                <UserProfile 
+                    key={item.id} 
+                    item={item}
+                />
+            );
+        });
+    }  
+
+    componentDidMount(){
+        this.getUserProfiles();
+    }
+
+    render(){
+        if (this.state.isLoading){
+            return <div>Loading...</div>;
+        }       
+        
+        return (       
+            <div className="user-profiles-wrapper">
+                <button className="btn" onClick={() => this.handleFilter('Male')}>Male</button>
+                <button className="btn" onClick={() => this.handleFilter('Female')}>Female</button>                
+
+                {this.userProfiles()}   
+            </div>            
+        );
+    }
+}
