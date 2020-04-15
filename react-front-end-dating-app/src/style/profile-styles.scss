@@ -1,0 +1,43 @@
+
+.profiles{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  
+  .profileWithButtons{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    .buttons{
+      display: flex;
+      width: 20vw;
+      justify-content: space-between;
+
+      .vote-button{
+        height: 40px;
+        width: 10vw;
+      }
+    }
+    .profile{
+      border: 1px solid black;
+      width: 20vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .scores{
+        width: 18vw;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .profile-img{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100px;
+      }
+    }
+  }
+}

@@ -1,10 +1,12 @@
 import React from 'react';
 import UserContainer from '../users/user-container';
+import UserContainerPractice from '../users/user-container-practice'
 
-export default function(){    
+export default function () {
     return (
-        <div>            
-            <UserContainer />
+        <div>
+            <UserContainerPractice />
+            {/* <UserContainer /> */}
         </div>
     );
 }
