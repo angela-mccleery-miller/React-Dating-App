@@ -6,32 +6,108 @@ export default class UserProfile extends Component{
         super(props);
 
         this.state = {
-            portfolioItemClass: ""
+           
+            isHot: this.props.item.hotScore,
+            isNotHot: this.props.item.notScore
         };
     }
 
-    // handleMouseEnter(){
+    handleIsHot = () => {
+        let scoreHot = parseInt(this.state.isHot) + 1
+        fetch(
+            `https://jel-flask-dating-app-api.herokuapp.com/profile/${this.props.item.id}`, 
+            {
+                method: "PATCH",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    hotScore: scoreHot.toString(),
+                    notScore: this.state.isNotHot.toString()
+                })
+            }
+        ).then((res) => {
+            this.setState({
+                isHot: scoreHot.toString()
+            })
+        })
+    }
+
+    handleIsNotHot = () => {
+        let scoreNotHot = parseInt(this.state.isNotHot) + 1
+        fetch(
+            `https://jel-flask-dating-app-api.herokuapp.com/profile/${this.props.item.id}`, 
+            {
+                method: "PATCH",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    notScore: scoreNotHot.toString(),
+                    hotScore: this.state.isHot.toString()
+                })
+            }
+        ).then((res) => {
+            this.setState({
+                isNotHot: scoreNotHot.toString()
+            })
+        })
+    }    
+
+    render(){    
+        const {id, name, password, description, gender, email, hotScore, notScore, profileImgUrl} = this.props.item;
+
+        return (     
+            <div className="profile-item-wrapper">
+                <div className="hotnothot-score-wrapper">
+                    <div>
+                        <p>Hot: {this.state.isHot}</p>
+                    </div>
+                    <div>
+                        <p>Not Hot:{this.state.isNotHot}</p>
+                    </div>
+                </div>
+
+                <div className="img-profile-wrapper">
+                    <img src={profileImgUrl} />
+                </div>
+
+                <div className="user-info-wrapper">
+                    <p>Name: {name}</p>
+                    <p>Gender: {gender}</p>
+                    <p>Email: {email}</p>
+                    <p>Description: {description}</p>                   
+                </div>
+
+                <div className="btn-wrapper">
+                    <button onClick={this.handleIsHot}>Is hot!!</button>
+                    <button onClick={this.handleIsNotHot}>Is NOt hot!!</button>
+                    <button>View Profile</button>
+                </div>                
+            </div>  
+        );
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// portfolioItemClass: "",
+
+// handleMouseEnter(){
     //     this.setState({portfolioItemClass: 'image-blur'})
     // }
 
     // handleMouseLeave(){
     //     this.setState({portfolioItemClass: ''})
     // }
-
-    render(){    
-        const {id, name, password, description, gender, email, hotScore, notScore, profileImgUrl} = this.props.item;
-
-        return (     
-            <div>
-                <div className="img-profile-wrapper">
-                    <img src={profileImgUrl} />
-                </div>
-                <div>
-                    <p>{name}</p>
-                </div>
-            </div>   
-
-
 
             // <div className="portfolio-item-wrapper"
             //     onMouseEnter={() => this.handleMouseEnter()}
@@ -52,6 +128,4 @@ export default class UserProfile extends Component{
             //         <div className="subtitle">{description}</div>
             //     </div>
             // </div>        
-        );
-    }
-}
+        

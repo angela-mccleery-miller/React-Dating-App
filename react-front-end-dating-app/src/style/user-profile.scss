@@ -1,0 +1,10 @@
+.profile-item-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .img-profile-wrapper img{
+        width: 60%;
+        height: 220px;
+        border-radius: 50%;
+    }
+}

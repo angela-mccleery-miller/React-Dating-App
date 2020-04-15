@@ -31,16 +31,17 @@ export default class UserContainer extends Component{
           .then(response => {
             console.log("response data", response);
             this.setState({
-                data: response.data.profiles
+                data: response.data
             })
           })
           .catch(error => {
             console.log(error);
-          });  
+          });           
     }
 
     userProfiles(){            
         return this.state.data.map(item => {
+            console.log(item)
             return (
                 <UserProfile 
                     key={item.id} 
@@ -61,8 +62,8 @@ export default class UserContainer extends Component{
         
         return (       
             <div className="user-profiles-wrapper">
-                <button className="btn" onClick={() => this.handleFilter('Male')}>Male</button>
-                <button className="btn" onClick={() => this.handleFilter('Female')}>Female</button>                
+                <button className="btn" onClick={() => this.handleFilter('male')}>Male</button>
+                <button className="btn" onClick={() => this.handleFilter('female')}>Female</button>                
 
                 {this.userProfiles()}   
             </div>            

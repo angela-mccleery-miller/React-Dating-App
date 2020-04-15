@@ -9,7 +9,7 @@ import {
 import NavigationContainer from "./navigation/navigation-container"
 import Home from "./pages/home";
 import About from "./pages/about";
-// import UserDetail from "./users/user-detail";
+import UserDetail from "./users/user-detail";
 
 
 export default class App extends Component {
@@ -23,11 +23,11 @@ export default class App extends Component {
             
             <Switch>
               <Route exact path="/" component={Home} /> 
-              <Route path="/about-us" component={About} />
-              {/* <Route 
-                exact path="/user/:slug" 
+              <Route path="/about-us" component={About} />   
+              <Route 
+                exact path="/profile/:slug" 
                 component={UserDetail} 
-              />   */}
+              />            
             </Switch>          
           </div>         
         </Router>

@@ -3,7 +3,8 @@ import UserContainer from '../users/user-container';
 
 export default function(){    
     return (
-        <div>            
+        <div>       
+            <h1>Home</h1>     
             <UserContainer />
         </div>
     );
