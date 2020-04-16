@@ -58,12 +58,17 @@ body {
   width: 275px;
   background-color: #000;
   color: #fff;
-  margin: left;
-  // display: grid;
-  // grid-gap: 15px;
-  display: inline-block;
+  // margin-top: 85px;
   border-radius: 10px;
   border-spacing: 5px;
+}
+
+.userProfile-wrapper-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // margin-top: 85px;
+
+
 }
 
 .user-info-wrapper h4 {
@@ -107,8 +112,8 @@ body {
 }
 
 .btn1 {
-  position: absolute;
-  left: 310px;
+  // position: absolute;
+  // left: 310px;
   top: 75px;
   font-weight: bold;
   font-size: 18px;
@@ -124,9 +129,9 @@ body {
 }
 
 .btn2 {
-  position: absolute;
-  right: 310px;
-  top: 75px;
+  // position: absolute;
+  // right: 310px;
+  // top: 75px;
   font-weight: bold;
   font-size: 18px;
   color: #fff;
@@ -140,18 +145,26 @@ body {
   color: #b16fbf;
 }
 
-// .userProfile-wrapper {
-//     display: grid;
-//     grid-template-columns: 1fr;
-// }
-
-
-.navBar-wrapper footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 80px;
-  left: 0px;
-  background-color: black;
-
+.userProfile-buttons {
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: 1fr;
+    width: 100vw;
+    justify-content: space-around;
+    margin-top: 85px;
 }
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+// .navBar-wrapper footer {
+//   position: absolute;
+//   bottom: 0px;
+//   width: 100%;
+//   height: 80px;
+//   left: 0px;
+//   background-color: black;
+
