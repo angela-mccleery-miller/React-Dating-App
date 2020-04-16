@@ -6,12 +6,14 @@ import {
 } from 'react-router-dom';
 
 
-import NavigationContainer from "./navigation/navigation-container"
+import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
+import Auth from "./pages/auth";
 import About from "./pages/about";
 import NewAccount from './pages/create-new-account';
 import LoginPractice from './pages/login-practice';
 import UserDetail from "./users/user-detail";
+
 
 
 export default class App extends Component {
@@ -24,16 +26,30 @@ export default class App extends Component {
             <NavigationContainer />
 
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about-us" component={About} />
-              <Route path='/new-account' component={NewAccount} />
-              <Route path='/login-practice' component={LoginPractice} />
-              <Route
-                exact path="/profile/:slug"
-                component={UserDetail}
+
+              <Route exact path="/" component={Home} /> 
+              <Route 
+                path="/auth" 
+                render={props => (
+                  <Auth
+                    {...props}
+                    handleSuccessfulLogin={this.handleSuccessfulLogin}
+                    handleUnSuccessfulLogin={this.handleUnSuccessfulLogin} 
+                  />
+                )}
+              /> 
+              <Route path="/about" component={About} />   
+              <Route 
+                exact path="/profile/:slug" 
+                component={UserDetail} 
               />
-            </Switch>
-          </div>
+               <Route path='/new-account' component={NewAccount} />
+               <Route path='/login-practice' component={LoginPractice} />  
+            </Switch>   
+
+            {/* <Footer />        */}
+          </div>         
+
         </Router>
 
       </div>
