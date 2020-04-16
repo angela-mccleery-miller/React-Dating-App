@@ -57,23 +57,23 @@ export default class UserContainer extends Component {
     return (
       <div className="userProfile-buttons">
         <div className="button-wrapper">
-        <button className="btn1" onClick={() => this.handleFilter("male")}>
-          Male
-        </button>
-        <button className="btn2" onClick={() => this.handleFilter("female")}>
-          Female
-        </button>
+          <button className="btn1" onClick={() => this.handleFilter("male")}>
+            Male
+          </button>
+          <button className="btn2" onClick={() => this.handleFilter("female")}>
+            Female
+          </button>
         </div>
-      <div className="userProfile-wrapper-wrapper">
+        <div className="userProfile-wrapper-wrapper">
         
-        <div className="user-profiles-wrapper">
-                    {/* <div>
-                    <button className="btn" onClick={() => this.handleFilter('male')}>Male</button>
-                    <button className="btn" onClick={() => this.handleFilter('female')}>Female</button>                                    
-        </div>
-        {this.userProfiles()}
-      </div>
-      </div>
+          {/* <div className="user-profiles-wrapper">
+            <div>
+              <button className="btn" onClick={() => this.handleFilter('male')}>Male</button>
+              <button className="btn" onClick={() => this.handleFilter('female')}>Female</button>                                    
+          </div> */}
+          {this.userProfiles()}
+        </div>  
+      </div>   
     );
   }
 }
