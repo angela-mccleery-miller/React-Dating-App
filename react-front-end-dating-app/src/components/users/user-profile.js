@@ -54,7 +54,7 @@ export default class UserProfile extends Component{
         const {id, name, password, description, gender, email, hotScore, notScore, profileImgUrl} = this.props.item;
 
         return (     
-            <div className="user-profile-wrapper">
+            <div className="profile-item-wrapper">
                 <div className="hotnothot-score-wrapper">
                     <div>
                         <p>Hot:  {this.state.isHot}</p>
