@@ -54,21 +54,24 @@ export default class UserProfile extends Component{
         const {id, name, password, description, gender, email, hotScore, notScore, profileImgUrl} = this.props.item;
 
         return (     
-            <div className="profile-item-wrapper">
+            <div className="user-profile-wrapper">
                 <div className="hotnothot-score-wrapper">
                     <div>
-                        <p>Hot: {this.state.isHot}</p>
+                        <p>Hot:  {this.state.isHot}</p>
                     </div>
                     <div>
-                        <p>Not Hot:{this.state.isNotHot}</p>
+                        <p>not Hot:  {this.state.isNotHot}</p>
                     </div>
                 </div>
 
                 <div className="img-profile-wrapper">
-                    <img src={profileImgUrl} />
+                    <div>
+                        <img src={profileImgUrl} />
+                    </div>                    
                 </div>
 
                 <div className="user-info-wrapper">
+
                   <h4>{name}</h4>
                     {/* <p>Name: {name}</p> */}
                     <p>Gender: {gender}</p>
@@ -83,6 +86,7 @@ export default class UserProfile extends Component{
                     <style>width="12" height="10"</style>
             </div>                
           </div>
+
         );
     }
 } 
