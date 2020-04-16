@@ -10,6 +10,8 @@ import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
 import Auth from "./pages/auth";
 import About from "./pages/about";
+import NewAccount from './pages/create-new-account';
+import LoginPractice from './pages/login-practice';
 import UserDetail from "./users/user-detail";
 
 
@@ -22,8 +24,9 @@ export default class App extends Component {
         <Router>
           <div>
             <NavigationContainer />
-            
+
             <Switch>
+
               <Route exact path="/" component={Home} /> 
               <Route 
                 path="/auth" 
@@ -39,13 +42,16 @@ export default class App extends Component {
               <Route 
                 exact path="/profile/:slug" 
                 component={UserDetail} 
-              />            
+              />
+               <Route path='/new-account' component={NewAccount} />
+               <Route path='/login-practice' component={LoginPractice} />  
             </Switch>   
 
             {/* <Footer />        */}
           </div>         
+
         </Router>
-        
+
       </div>
     );
   }

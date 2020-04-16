@@ -1,13 +1,17 @@
 import React from 'react';
 import UserContainer from '../users/user-container';
+import NewAccount from '../pages/create-new-account'
 
-export default function(){    
+export default function () {
     return (
-
         <div className="home"> 
             <h1>Home</h1>     
 
-            <UserContainer />
+        <div className="home-content-wrapper">       
+            {/* <h1>Home</h1>      */}
+
+           <UserContainer />
         </div>
+      </div>
     );
 }
