@@ -54,31 +54,48 @@ export default class UserProfile extends Component{
         const {id, name, password, description, gender, email, hotScore, notScore, profileImgUrl} = this.props.item;
 
         return (     
-            <div className="profile-item-wrapper">
+            <div className="user-profile-wrapper">
                 <div className="hotnothot-score-wrapper">
                     <div>
-                        <p>Hot: {this.state.isHot}</p>
+                        <p>Hot:  {this.state.isHot}</p>
                     </div>
                     <div>
-                        <p>Not Hot:{this.state.isNotHot}</p>
+                        <p>not Hot:  {this.state.isNotHot}</p>
                     </div>
                 </div>
 
                 <div className="img-profile-wrapper">
-                    <img src={profileImgUrl} />
+                    <div>
+                        <img src={profileImgUrl} />
+                    </div>                    
                 </div>
 
                 <div className="user-info-wrapper">
-                    <p>Name: {name}</p>
-                    <p>Gender: {gender}</p>
-                    <p>Email: {email}</p>
-                    <p>Description: {description}</p>                   
+                    <div className="name">
+                        <p>{name}</p>
+                    </div>
+                    <div>
+                        <p>Gender: {gender}</p>
+                    </div>
+                    <div>
+                        <p>Email: {email}</p>
+                    </div>
+                    <div>
+                        <p>Description: {description}</p>   
+                    </div>
                 </div>
 
                 <div className="btn-wrapper">
-                    <button onClick={this.handleIsHot}>Is hot!!</button>
-                    <button onClick={this.handleIsNotHot}>Is NOt hot!!</button>
-                    <button>View Profile</button>
+                    <div>
+                        <button onClick={this.handleIsHot}>Is hot!!</button>
+                    </div>
+                    <div>
+                        <button onClick={this.handleIsNotHot}>Is NOt hot!!</button>
+                    </div>
+                    <div>
+                        <button>View Profile</button>
+                    </div>
+                    
                 </div>                
             </div>  
         );

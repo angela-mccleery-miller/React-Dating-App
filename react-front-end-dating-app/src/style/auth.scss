@@ -1,0 +1,22 @@
+.auth-page-wrapper{
+    background-color: #991d1d;
+    width: 1200px;
+    height: 60px;
+
+    .login-message{
+        color: white;
+    }
+
+    .form-wrapper{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .auth-content-wrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+}
