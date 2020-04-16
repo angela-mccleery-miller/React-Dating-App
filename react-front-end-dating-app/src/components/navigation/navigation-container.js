@@ -8,8 +8,12 @@ export default class NavigationComponent extends Component {
 
     render(){
         return(
-            <div>
-                <h2>Navigation bar</h2>
+            <div className="navBar-wrapper">
+             <h1>HOT or NOT</h1>
+                <button class="btn"
+                id="maleBtn">Male</button>
+                <button class="btn" id="femaleBtn">Female</button>
+                <button class="btn" id="topBtn">Top Hots</button>
             </div>
         )
     }

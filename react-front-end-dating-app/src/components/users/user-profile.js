@@ -69,18 +69,20 @@ export default class UserProfile extends Component{
                 </div>
 
                 <div className="user-info-wrapper">
-                    <p>Name: {name}</p>
+                  <h4>{name}</h4>
+                    {/* <p>Name: {name}</p> */}
                     <p>Gender: {gender}</p>
                     <p>Email: {email}</p>
                     <p>Description: {description}</p>                   
                 </div>
 
                 <div className="btn-wrapper">
-                    <button onClick={this.handleIsHot}>Is hot!!</button>
-                    <button onClick={this.handleIsNotHot}>Is NOt hot!!</button>
-                    <button>View Profile</button>
-                </div>                
-            </div>  
+                    <button onClick={this.handleIsHot}>Is HOT!</button>
+                    <button onClick={this.handleIsNotHot}>Is NOT Hot!</button>
+                    <button>View Profile</button> 
+                    <style>width="12" height="10"</style>
+            </div>                
+          </div>
         );
     }
 } 
