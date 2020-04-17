@@ -1,14 +1,6 @@
-html * {
-    margin: 0;
+html {
     font-size: 62.5%; // 1rem is 10px
 }
-
-// p {
-//     font-weight: 400;
-//     font-size: inherit;
-//     line-height: 1.125;
-//     font-family: serif;
-// }
 
 *,
 *::after,
@@ -19,17 +11,7 @@ html * {
     font-family: 'montserrat';
 }
 
-.header .header-wrapper {
-    display: flex;
-    width: 100%;
-    height: 200px;
-    background-image:  linear-gradient(to right, #42454a, #8a8a8a);
-    background-color: #f6f6f6;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.body {
+body {
     overflow-x: hidden;
     font-weight: normal;
 
@@ -39,21 +21,17 @@ html * {
     -webkit-tap-highlight-color: transparent;
 }
 
-.title h1 {
-    color: black;
-    font: Roboto sans-serif;
-    font-size: 60px;
-    margin-top: 60px;
-    margin-left: 85px;
-
-    text-align: center;
+.app {
+    // margin-top: 2rem;
+    display: grid;
+    justify-items: center;
 }
 
 
-@import "./user-profile.scss";
-@import "./user-profile.scss";
+// @import "./user-profile.scss";
+// @import "./user-profile.scss";
 
-@import "./login-styles.scss";
+// @import "./login-styles.scss";
 
-@import "./auth.scss"
+// @import "./auth.scss"
 

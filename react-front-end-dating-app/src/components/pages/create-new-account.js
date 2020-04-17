@@ -51,7 +51,7 @@ export default class NewAccount extends Component {
       });
 
     event.preventDefault();
-    this.props.history.push('/login-practice')
+    this.props.history.push('/login')
   }
 
   render() {

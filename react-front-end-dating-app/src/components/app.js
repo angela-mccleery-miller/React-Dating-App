@@ -27,28 +27,28 @@ export default class App extends Component {
 
             <Switch>
 
-              <Route exact path="/" component={Home} /> 
-              <Route 
-                path="/auth" 
+              <Route exact path="/" component={Home} />
+              <Route
+                path="/auth"
                 render={props => (
                   <Auth
                     {...props}
                     handleSuccessfulLogin={this.handleSuccessfulLogin}
-                    handleUnSuccessfulLogin={this.handleUnSuccessfulLogin} 
+                    handleUnSuccessfulLogin={this.handleUnSuccessfulLogin}
                   />
                 )}
-              /> 
-              <Route path="/about" component={About} />   
-              <Route 
-                exact path="/profile/:slug" 
-                component={UserDetail} 
               />
-               <Route path='/new-account' component={NewAccount} />
-               <Route path='/login-practice' component={LoginPractice} />  
-            </Switch>   
+              <Route path="/about" component={About} />
+              <Route
+                exact path="/profile/:slug"
+                component={UserDetail}
+              />
+              <Route path='/new-account' component={NewAccount} />
+              <Route path='/login' component={LoginPractice} />
+            </Switch>
 
             {/* <Footer />        */}
-          </div>         
+          </div>
 
         </Router>
 
