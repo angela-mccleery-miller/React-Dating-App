@@ -3,12 +3,13 @@ import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
 
 import "../../style/about.scss"
+import Logo from '../../../static/assets/images/auth/hot-or-not-logo.png'
 
 export default function () {
     return (
         <div>
             <div className="backgroung-img-wrapper">
-                About
+               <br/>
             </div>
             <div className="content-wrapper">
                 <div className="info-about-us-wrapper">
@@ -72,6 +73,19 @@ export default function () {
                     <a href="https://jel-flask-dating-app-api.herokuapp.com/profiles">https://jel-flask-dating-app-api.herokuapp.com/profiles</a>
                     <p>API heroku</p>
                 </div>
+            </div>
+
+            <div className='footer'>
+                    <div className='footer-logo'>
+                        <img src={Logo} />
+                    </div>
+                    <div className="links-wrapper">
+                        <Link to="/">Home</Link>
+                        <Link to="/about">About</Link>
+                    </div>
+                    <div className='copyright'>
+                        <h3>Copyright message</h3>
+                    </div>
             </div>
         </div>
     )
