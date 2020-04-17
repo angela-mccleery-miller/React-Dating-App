@@ -50,10 +50,25 @@ html * {
 }
 
 
-@import "./user-profile.scss";
+#homeButton {
+    font-size: 45px;
+    border-radius: 10px;
+    border: 4px solid #fff;
+    height: 70px;
+    width: 150px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 6px;
+
+  }
+  
+
 @import "./user-profile.scss";
 
 @import "./login-styles.scss";
 
-@import "./auth.scss"
-
+@import "./auth.scss";
