@@ -1,0 +1,89 @@
+.backgroung-img-wrapper{
+    // background-image: url(../components//images/cullan-smith-BdTtvBRhOng-unsplash.jpg);
+}
+
+.content-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-top: 110px;
+
+    .info-about-us-wrapper{
+        background-color: black;
+        color: white;
+        
+        p{
+            color: gray;
+            font-size: 2rem;
+        }
+
+        .title-wrapper{
+            margin: 5px 0px 5px 50px;
+            h1{            
+                font-size: 2rem;
+                color: #1c54bb;
+            }
+        }
+
+        .bullets-names-wrapper{
+            margin: 10px 0px 8px 150px;
+        }
+
+        .description-wrapper{
+            margin: 30px 0px 20px 15px;
+
+            p{
+                color: #bdbbbb;
+                font-size: 1.5rem;
+            }
+        }
+
+        .hot-wrapper{
+            margin: 90px 0px 0px 180px;
+            p{
+                color: #c93333;
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+.git-heroku-links-wrapper{
+    height: 150px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .left-column{
+        padding-top: 27px;
+        padding-left: 8px;
+        a{
+            font-size: 1.1rem;
+            color: black;
+        }
+        p{
+            font-size: 0.7rem;
+            color: blue;
+            font-weight: bold;
+        }    
+    }
+
+    .right-column{
+        padding-top: 27px;
+        padding-left: 8px;
+        a{
+            font-size: 1.1rem;
+            color: black;
+        }
+        p{
+            font-size: 0.7rem;
+            color: blue;
+            font-weight: bold;
+        }    
+    }
+
+}
+
+p{
+    font-family: 'Fjalla One', sans-serif;
+}
