@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from '../../../static/assets/images/auth/hot-or-not-logo.png'
 
 
@@ -16,6 +16,10 @@ export default class NavigationContainer extends Component {
                 </div>
                 <div className='logo'>
                     <img src={Logo} />
+                </div>
+                <div className="links-wrapper">
+                    <Link to="/">Home</Link>
+                    <Link to="/about">About</Link>
                 </div>
             </div>
         )

@@ -7,6 +7,15 @@
 
   .logo img {
     height: 65px;
+    margin-right: 50px;
+  }
+
+  .links-wrapper{
+    a{
+      margin: 0px 15px 0px 15px;
+      color: white;
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -207,6 +216,14 @@ color: white;
 
   .footer-logo img {
     height: 65px;
+  }
+
+  .links-wrapper{
+    a{
+      margin: 0px 15px 0px 15px;
+      color: white;
+      font-size: 1.8rem;
+    }
   }
 }
 // .navBar-wrapper footer {

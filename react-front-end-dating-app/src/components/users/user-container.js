@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Logo from '../../../static/assets/images/auth/hot-or-not-logo.png'
 import UserProfile from "./user-profile";
@@ -77,6 +78,10 @@ export default class UserContainer extends Component {
                 <div className='footer'>
                     <div className='footer-logo'>
                         <img src={Logo} />
+                    </div>
+                    <div className="links-wrapper">
+                        <Link to="/">Home</Link>
+                        <Link to="/about">About</Link>
                     </div>
                     <div className='copyright'>
                         <h3>Copyright message</h3>
