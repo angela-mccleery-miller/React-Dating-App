@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactPlayer from 'react-player'
-import {Link} from "react-router-dom";
+import ReactPlayer from 'react-player';
+import { Link } from "react-router-dom";
 
 import "../../style/about.scss"
 
-export default function(){    
+export default function () {
     return (
         <div>
             <div className="backgroung-img-wrapper">
-                About               
+                About
             </div>
             <div className="content-wrapper">
                 <div className="info-about-us-wrapper">
@@ -19,7 +19,7 @@ export default function(){
                         </h1>
                     </div>
                     <div className="bullets-names-wrapper">
-                        <p>                        
+                        <p>
                             <li>Angela Miller</li>
                             <li>Jess Larson</li>
                             <li>Jacob Archer</li>
@@ -28,8 +28,8 @@ export default function(){
                     </div>
                     <div className="description-wrapper">
                         <p>
-                            We are Bottega School Students, 
-                            we're taking classes online because 
+                            We are Bottega School Students,
+                            we're taking classes online because
                             we are in quarantined thanks to the CoronaVirus!!!
                         </p>
                     </div>
@@ -41,38 +41,38 @@ export default function(){
                 </div>
                 <div className="video-wrapper">
                     <ReactPlayer
-                    url='https://www.youtube.com/watch?v=r7dZKOL5rcg'
-                    className='react-player'
-                    playing
-                    width='100%'
-                    height='500px'
+                        url='https://www.youtube.com/watch?v=r7dZKOL5rcg'
+                        className='react-player'
+                        playing
+                        width='100%'
+                        height='500px'
                     />
                 </div>
             </div>
 
             <div className="git-heroku-links-wrapper">
                 <div className="left-column">
-                    <a href="https://github.com/angela-mccleery-miller/React-Dating-App">https://github.com/angela-mccleery-miller/React-Dating-App</a>                    
+                    <a href="https://github.com/angela-mccleery-miller/React-Dating-App">https://github.com/angela-mccleery-miller/React-Dating-App</a>
                     <p>GitHub React Project</p>
 
                     <a href="https://jel-flask-dating-app-api.herokuapp.com/profiles">https://jel-flask-dating-app-api.herokuapp.com/profiles</a>
-                    <p>API heroku</p>   
+                    <p>API heroku</p>
 
-                    <a href="https://github.com/angela-mccleery-miller/React-Dating-App">https://github.com/angela-mccleery-miller/React-Dating-App</a>                    
+                    <a href="https://github.com/angela-mccleery-miller/React-Dating-App">https://github.com/angela-mccleery-miller/React-Dating-App</a>
                     <p>GitHub React Project</p>
                 </div>
 
                 <div className="right-column">
                     <a href="https://jel-flask-dating-app-api.herokuapp.com/profiles">https://jel-flask-dating-app-api.herokuapp.com/profiles</a>
-                    <p>API heroku</p>  
+                    <p>API heroku</p>
 
-                    <a href="https://github.com/angela-mccleery-miller/React-Dating-App">https://github.com/angela-mccleery-miller/React-Dating-App</a>                    
+                    <a href="https://github.com/angela-mccleery-miller/React-Dating-App">https://github.com/angela-mccleery-miller/React-Dating-App</a>
                     <p>GitHub React Project</p>
 
                     <a href="https://jel-flask-dating-app-api.herokuapp.com/profiles">https://jel-flask-dating-app-api.herokuapp.com/profiles</a>
-                    <p>API heroku</p> 
-                </div>        
+                    <p>API heroku</p>
+                </div>
             </div>
         </div>
-    ) 
+    )
 }
